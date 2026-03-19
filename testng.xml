@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="OrangeHRM Automation Suite" verbose="1">
+
+    <!-- Sprint 1: Login Module -->
+    <test name="Sprint 1 - Login Module">
+        <classes>
+            <class name="tests.OrangeHRMTest">
+                <methods>
+                    <include name="validAdminLogin"/>
+                    <include name="invalidLoginWrongPassword"/>
+                    <include name="invalidLoginWrongUsername"/>
+                    <include name="verifyDashboardUrl"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Sprint 2: Add Employee Module -->
+    <test name="Sprint 2 - Add Employee Module">
+        <classes>
+            <class name="tests.OrangeHRMTest">
+                <methods>
+                    <include name="navigateToAddEmployee"/>
+                    <include name="addNewEmployee"/>
+                    <include name="addEmployeeMinimalDetails"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Sprint 3: Search and Verify Module -->
+    <test name="Sprint 3 - Employee Search Module">
+        <classes>
+            <class name="tests.OrangeHRMTest">
+                <methods>
+                    <include name="navigateToEmployeeList"/>
+                    <include name="searchEmployeeByName"/>
+                    <include name="searchNonExistentEmployee"/>
+                    <include name="verifyEmployeeListHasRecords"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
